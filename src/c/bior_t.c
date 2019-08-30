@@ -359,7 +359,7 @@ static const double g1_3[20] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
   0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
 };
 
-static int
+static SWTLIB_UNUSED int
 bspline_init (const double **h1, const double **g1,
               const double **h2, const double **g2, size_t * nc,
               size_t * offset, size_t member)

@@ -19,6 +19,18 @@
 #define SWTLIB_IMPORTEXPORT
 #endif
 
+#ifndef SWTLIB_UNUSED
+#if  defined(__GNUC__) && __GNUC__   >=   4  // gcc version is v4.0 or later
+//#  define SWTLIB_EXPORT   __attribute__((used))  __attribute__ ((visibility ("default")))
+//#  define SWTLIB_LOCAL    __attribute__((unused))  __attribute__ ((visibility ("hidden")))
+#  define SWTLIB_UNUSED    __attribute__((unused))
+# else
+//#  define SWTLIB_EXPORT
+//#  define SWTLIB_LOCAL
+#  define SWTLIB_UNUSED
+# endif
+#endif
+
 #undef __BEGIN_DECLS
 #undef __END_DECLS
 #ifdef __cplusplus
@@ -322,7 +334,7 @@
       {"cgau7", COMPLEX, CGAUSS, PSI_ONLY, -5, 5, 1, cgau7_packet},
       {"cgau8", COMPLEX, CGAUSS, PSI_ONLY, -5, 5, 1, cgau8_packet}
     };
-    static int cwtIdentityNum = sizeof(ci)/sizeof(cwt_identity);
+    static SWTLIB_UNUSED int cwtIdentityNum = sizeof(ci)/sizeof(cwt_identity);
 
     static cwt_family cif[] = {
       {"sinus", "REAL", "SINUS"},
@@ -337,7 +349,7 @@
       {"gaus", "REAL", "GAUSS"},
       {"cgau", "COMPLEX", "CGAUSS"}
     };
-    static int cwtFamilyNum = sizeof(cif)/sizeof(cwt_family);
+    static SWTLIB_UNUSED int cwtFamilyNum = sizeof(cif)/sizeof(cwt_family);
 
     #define ISODD(x)        ((x/2.0)== ((int)(x/2)) ? 0 : 1)
 
@@ -528,7 +540,7 @@
       {"ksq2", ORTH, KINGSBURYQ, 2, kingsburyq_analysis_initialize, kingsburyq_synthesis_initialize}
     };
 
-    static int waveletIdentityNum = sizeof(wi)/sizeof(wavelet_identity);
+    static SWTLIB_UNUSED int waveletIdentityNum = sizeof(wi)/sizeof(wavelet_identity);
 
     static wavelet_family wif[] = {
       {"haar","ORTH", "HAAR"},
@@ -545,16 +557,16 @@
       {"fa", "ORTH", "FARRAS"},
       {"ksq", "ORTH", "KINGSBURYQ"}
     };
-    static int waveletFamilyIdentityNum = sizeof(wif)/sizeof(wavelet_family);
+    static SWTLIB_UNUSED int waveletFamilyIdentityNum = sizeof(wif)/sizeof(wavelet_family);
 
-    static extend_method dwtMode = SYMH;
+    static SWTLIB_UNUSED extend_method dwtMode = SYMH;
 
 
 
 
     // wavelet_identity wi[];
 
-    static double LowDecomFilCoef[80] = {0.0,0.0,0.0,0.0,0.0,
+    static SWTLIB_UNUSED double LowDecomFilCoef[80] = {0.0,0.0,0.0,0.0,0.0,
       0.0,0.0,0.0,0.0,0.0,
       0.0,0.0,0.0,0.0,0.0,
       0.0,0.0,0.0,0.0,0.0,
@@ -571,7 +583,7 @@
       0.0,0.0,0.0,0.0,0.0,
       0.0,0.0,0.0,0.0,0.0};
 
-      static double LowReconFilCoef[80] = {0.0,0.0,0.0,0.0,0.0,
+      static SWTLIB_UNUSED double LowReconFilCoef[80] = {0.0,0.0,0.0,0.0,0.0,
         0.0,0.0,0.0,0.0,0.0,
         0.0,0.0,0.0,0.0,0.0,
         0.0,0.0,0.0,0.0,0.0,
@@ -588,7 +600,7 @@
         0.0,0.0,0.0,0.0,0.0,
         0.0,0.0,0.0,0.0,0.0};
 
-        static double HiDecomFilCoef[80] = {0.0,0.0,0.0,0.0,0.0,
+        static SWTLIB_UNUSED double HiDecomFilCoef[80] = {0.0,0.0,0.0,0.0,0.0,
           0.0,0.0,0.0,0.0,0.0,
           0.0,0.0,0.0,0.0,0.0,
           0.0,0.0,0.0,0.0,0.0,
@@ -605,7 +617,7 @@
           0.0,0.0,0.0,0.0,0.0,
           0.0,0.0,0.0,0.0,0.0};
 
-          static double HiReconFilCoef[80] = {0.0,0.0,0.0,0.0,0.0,
+          static SWTLIB_UNUSED double HiReconFilCoef[80] = {0.0,0.0,0.0,0.0,0.0,
             0.0,0.0,0.0,0.0,0.0,
             0.0,0.0,0.0,0.0,0.0,
             0.0,0.0,0.0,0.0,0.0,
@@ -633,7 +645,7 @@
               {"SPD", SP1},  {"SYM", SYMH}, {"ASYM", ASYMH}
             };
 
-            static int extensionIdentityNum = sizeof(ei)/sizeof(extension_identity);
+            static SWTLIB_UNUSED int extensionIdentityNum = sizeof(ei)/sizeof(extension_identity);
 
 
             void
