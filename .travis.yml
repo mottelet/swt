@@ -1,4 +1,4 @@
-dist: trusty
+dist: bionic
 language: cpp
 os:
   - linux
@@ -7,7 +7,9 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y scilab; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew cask install homebrew/cask-versions/adoptopenjdk8; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install scilab; fi
+
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then scilab -version; true; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then '/Applications/Scilab-6.0.2.app/Contents/MacOS/bin/scilab' -version; true; fi
 script:

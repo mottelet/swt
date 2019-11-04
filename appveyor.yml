@@ -2,8 +2,8 @@ platform:
   - x64
 install:
   - choco install -y scilab
-  - setx path "%path%;C:\Program Files\scilab-5.5.2\bin\;"
-  - SET PATH=C:\Program Files\scilab-5.5.2\bin;%PATH%
+  - setx path "%path%;C:\Program Files\scilab-6.0.2\bin\;"
+  - SET PATH=C:\Program Files\scilab-6.0.2\bin;%PATH%
 build_script:
   - Scilex -nw -e "result = exec("""builder.sce""", """errcatch"""); exit(result)"
 test_script:
