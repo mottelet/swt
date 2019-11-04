@@ -7,5 +7,5 @@ install:
 build_script:
   - Scilex -e "result = exec("""builder.sce""", """errcatch"""); exit(result)"
 test_script:
-  - Scilex -nwni -e "result = exec("""loader.sce""", """errcatch"""); exec("""runtests.sce""", """errcatch"""); exit(result)"
+  - Scilex -e "result = exec("""loader.sce""", """errcatch"""); exec("""runtests.sce""", """errcatch"""); exit(result)"
   
