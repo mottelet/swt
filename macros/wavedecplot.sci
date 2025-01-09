@@ -58,7 +58,7 @@ cfd=matrix(cfd,level,len);
 
 x=1:len;
 scales=1:level;
-f.color_map =pink(64);
+f.color_map =parula(64);
 grayplot(x,scales,abs(cfd)');
 ylabel('Level');
 xlabel('time (or space)');
