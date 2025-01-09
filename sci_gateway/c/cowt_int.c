@@ -27,11 +27,7 @@
 
 int
 int_FSfarras
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int minlhs=1, maxlhs=2, minrhs=1, maxrhs=1;
@@ -160,11 +156,7 @@ int_FSfarras
 
 int
 int_dualfilt1
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int minlhs=1, maxlhs=2, minrhs=1, maxrhs=1;
@@ -293,11 +285,7 @@ int_dualfilt1
 
 int
 int_dualtree
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
    int l5, m5, n5, l6, m6, n6, l7, m7, n7, l8, m8, n8;
@@ -442,11 +430,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_idualtree
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
    int l5, m5, n5, l1r, l1c;
@@ -560,11 +544,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_dualtree2D
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
    int l5, m5, n5, l6, m6, n6, l7, m7, n7, l8, m8, n8;
@@ -693,11 +673,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_idualtree2D
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
    int l5, m5, n5, l1r, l1c;
@@ -831,11 +807,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_cplxdual2D
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
    int l5, m5, n5, l6, m6, n6, l7, m7, n7, l8, m8, n8;
@@ -989,11 +961,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_icplxdual2D
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
    int l5, m5, n5, l1r, l1c, l6, m6, n6, l2r, l2c;

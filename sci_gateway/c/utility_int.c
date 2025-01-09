@@ -29,14 +29,11 @@
 /*-------------------------------------------
  * convolution
  *-----------------------------------------*/
+int C2F(tpconv)(int *xtyp, int *ytyp, int *n, void *dx, int *incx, void *dy, int *incy);
 
 int
 int_conv 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int minlhs = 1, maxlhs = 1, minrhs = 2, maxrhs = 2;
@@ -90,11 +87,7 @@ int_conv
 
 int
 int_iconv 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int minlhs = 1, maxlhs = 1, minrhs = 2, maxrhs = 2;
@@ -155,11 +148,7 @@ int_iconv
 
 int
 int_wrev 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2;
   static int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 1;
@@ -205,11 +194,7 @@ int_wrev
 
 int
 int_qmf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 2;
@@ -287,11 +272,7 @@ int_qmf
 
 int
 int_dyaddown 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
   static int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 3;
@@ -803,11 +784,7 @@ int_dyaddown
 
 int
 int_dyadup 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
   static int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 3;
@@ -1286,11 +1263,7 @@ int_dyadup
 
 int
 int_wkeep 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
   static int minlhs = 1, maxlhs = 1, minrhs = 2, maxrhs = 3;
@@ -1536,11 +1509,7 @@ int_wkeep
 
 int
 int_wextend 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
 
   static int l1, m1, n1, m2, n2, m3, n3;
@@ -2245,11 +2214,7 @@ int_wextend
  * wcodemat
  *-----------------------------------------*/
 int int_wcodemat 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int  m1, n1,  m2, n2,  m3, n3;
   static int  m4, n4,  m5, n5;
@@ -2608,11 +2573,7 @@ int int_wcodemat
 
 int
 int_mat3Dtran 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3, mL2, nL2, s4;
   static int it3, mL3, nL3, lL3, lcL3, mL1, nL1, s3, l4, m4, n4;
@@ -2930,11 +2891,7 @@ int_mat3Dtran
 
 int
 int_wrev3 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3, mL2, nL2, s4;
   static int it3, mL3, nL3, lL3, lcL3, mL1, nL1, s3, l4, m4, n4;
@@ -3140,11 +3097,7 @@ int_wrev3
 
 int
 int_wrev2
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3;
   static int minlhs=1, maxlhs=1, minrhs=2, maxrhs=2;
@@ -3235,11 +3188,7 @@ int_wrev2
 
 int
 int_wnorm 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
   static int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 3;
@@ -3326,11 +3275,7 @@ int_wnorm
 
 int
 int_waveletfamilies 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
     int l1, m1, n1;
    int minlhs = 1, maxlhs = 1, minrhs = 0, maxrhs = 1;

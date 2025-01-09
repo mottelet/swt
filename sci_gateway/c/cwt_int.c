@@ -35,11 +35,7 @@
 
 /*int
 int_haar 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3;
   static int m4, n4, m5, n5;
@@ -89,11 +85,7 @@ int_haar
 
 int
 int_sinus 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5;
@@ -176,11 +168,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_poisson 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5;
@@ -261,11 +249,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_mexihat 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5;
@@ -345,11 +329,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_morlet 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5;
@@ -429,11 +409,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_DOGauss 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5;
@@ -513,11 +489,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_Gauswavf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5, m6, n6;
@@ -606,11 +578,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_shanwavf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5, m6, n6;
@@ -708,11 +676,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_cmorlet 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5, m6, n6;
@@ -813,11 +777,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_fbspwavf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5, m6, n6;
@@ -926,11 +886,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_cauchy 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, l5r, m5, n5;
@@ -1019,11 +975,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_cgauss 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, m5, n5, m6, n6;
@@ -1117,11 +1069,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_meyer 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4, l5r, m5, n5, l5i;
@@ -1214,11 +1162,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_meyeraux 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2;
    int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 1;
@@ -1255,11 +1199,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_wavefun 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3, m4, n4;
    int m5, n5, m6, n6, m7, n7;
@@ -1586,11 +1526,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 int
 int_wavefun2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3, m4, n4;
    int m5, n5, m6, n6, m7, n7;
@@ -1776,11 +1712,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
  *-----------------------------------------*/
 /*int
 int_wpsi 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
     static int m1, n1, m2, n2, l2r, l2i;
 	static int minlhs=1, maxlhs = 1, minrhs = 1, maxrhs = 1;
@@ -1838,11 +1770,7 @@ int_wpsi
 
 int
 int_cwtscale 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
 	static int m1, n1, m2, n2, m3, n3;
 	static int minlhs=1, maxlhs=1, minrhs=2, maxrhs=2;
@@ -1861,11 +1789,7 @@ int_cwtscale
 
 int
 int_cwtconv 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
     static int m1, n1, m2, n2, l2r, l2i, m3, n3, l3r, l3i;
 	static int minlhs=1, maxlhs=1, minrhs=2, maxrhs=2;
@@ -1901,11 +1825,7 @@ int_cwtconv
 
 int
 int_cwt 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
    int m1, n1, m2, n2, m3, n3;
    int m4, n4;
@@ -2220,11 +2140,7 @@ if(readFlag==SWT_GWSUPPORT_ERROR)
 
 /*int
 int_cwtzwei 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3;
   static int m4, n4, lrx, lcx;

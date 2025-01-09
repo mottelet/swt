@@ -26,11 +26,7 @@
 
 int
 int_dwt
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3;
   static int m4, n4, m5, n5, m6, n6;
@@ -356,15 +352,11 @@ int_dwt
 
 int
 int_idwt 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6, m7, n7, m8, n8;
-  static minlhs=1, maxlhs=1, minrhs=3, maxrhs=7;
+  static int minlhs=1, maxlhs=1, minrhs=3, maxrhs=7;
   int errCode, flow, family, member, ii, stride, val;
   Func syn_fun;
   swt_wavelet pWaveStruct;
@@ -1108,11 +1100,7 @@ int_idwt
 
 int
 int_wavedec 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3;
   static int m4, n4, m5, n5, m6, n6;
@@ -1337,11 +1325,7 @@ int_wavedec
 
 int
 int_waverec 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3;
   static int m4, n4, m5, n5;
@@ -1526,11 +1510,7 @@ int_waverec
 
 int
 int_wrcoef 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1,  m2, n2, m3, n3;
   static int  m4, n4,  m5, n5,  m6, n6;
@@ -1923,11 +1903,7 @@ int_wrcoef
 
 int
 int_appcoef 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3;
   static int m4, n4, m5, n5, m6, n6;
@@ -2282,11 +2258,7 @@ int_appcoef
 
 int
 int_detcoef 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int minrhs=2, maxrhs=3, minlhs=1, maxlhs=1;
@@ -2431,11 +2403,7 @@ int_detcoef
 
 int
 int_wenergy 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int minrhs=2, maxrhs=2, minlhs=2, maxlhs=2;
@@ -2517,11 +2485,7 @@ int_wenergy
 
 int
 int_upcoef 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int  m1, n1,  m2, n2,  m3, n3;
   static int  m4, n4,  m5, n5,  m6, n6;
@@ -2927,11 +2891,7 @@ int_upcoef
 
 int
 int_upwlev 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3;
   static int m4, n4, m5, n5, m6, n6;

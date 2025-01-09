@@ -26,11 +26,7 @@
 
 int
 int_dwt2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6, m7, n7, m8, n8;
@@ -441,11 +437,7 @@ int_dwt2
 
 int
 int_idwt2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6, m7, n7, m8, n8;
@@ -1053,11 +1045,7 @@ int_idwt2
 
 int
 int_wavedec2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6;
@@ -1277,11 +1265,7 @@ int_wavedec2
 
 int
 int_waverec2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5;
@@ -1504,11 +1488,7 @@ int_waverec2
 
 int
 int_wenergy2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6;
@@ -1672,11 +1652,7 @@ int_wenergy2
 
 int
 int_detcoef2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6, m7, n7;
@@ -1907,11 +1883,7 @@ int_detcoef2
 
 int
 int_appcoef2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6;
@@ -2196,11 +2168,7 @@ int_appcoef2
 
 int
 int_wrcoef2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6, m7, n7;
@@ -2489,11 +2457,7 @@ int_wrcoef2
 
 int
 int_upwlev2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6, m7, n7;
@@ -2726,11 +2690,7 @@ int_upwlev2
 
 int
 int_upcoef2 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int m1, n1, m2, n2, m3, n3, m4, n4;
   static int m5, n5, m6, n6, m7, n7;

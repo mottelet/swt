@@ -31,11 +31,7 @@
 
 int
 int_orthfilt 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int l4, m4, n4, l5, m5, n5;
@@ -118,11 +114,7 @@ int_orthfilt
 
 int
 int_biorfilt 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int l4, m4, n4, l5, m5, n5, l6, m6, n6;
@@ -211,11 +203,7 @@ int_biorfilt
 
 int
 int_dbwavf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2;
   static int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 1;
@@ -269,11 +257,7 @@ int_dbwavf
 
 int
 int_coifwavf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2;
   static int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 1;
@@ -326,11 +310,7 @@ int_coifwavf
 
 int
 int_symwavf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2;
   static int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 1;
@@ -382,11 +362,7 @@ int_symwavf
 
 int
 int_legdwavf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2;
   static int minlhs = 1, maxlhs = 1, minrhs = 1, maxrhs = 1;
@@ -438,11 +414,7 @@ int_legdwavf
 
 int
 int_biorwavf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int minlhs = 2, maxlhs = 2, minrhs = 1, maxrhs = 1;
@@ -510,11 +482,7 @@ int_biorwavf
 
 int
 int_rbiorwavf 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int minlhs = 2, maxlhs = 2, minrhs = 1, maxrhs = 1;
@@ -582,11 +550,7 @@ int_rbiorwavf
 
 int
 int_wfilters 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int l4, m4, n4, l5, m5, n5;
@@ -838,11 +802,7 @@ int_wfilters
 
 int
 int_wmaxlev 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int minlhs = 1, maxlhs = 1, minrhs = 2, maxrhs = 2;
@@ -976,11 +936,7 @@ int_wmaxlev
 
 int
 int_dwtmode 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
   static int minlhs = 0, maxlhs = 1, minrhs = 0, maxrhs = 2;

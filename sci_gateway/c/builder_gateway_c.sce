@@ -1,10 +1,8 @@
 // This file is released under the 3-clause BSD license. See COPYING-BSD.
 
 function builder_gw_c()
-  //gateway_path = strsubst(get_absolute_file_path("builder_gateway_c.sce"), "\", "/");
-	gateway_path = get_absolute_file_path("builder_gateway_c.sce");
-
-  //CFLAGS = "-I" + CURRENT_PATH;
+	gateway_path = get_absolute_file_path();
+    module_path =  fullpath(fullfile(gateway_path,"..",".."));
 
   // PutLhsVar managed by user in sci_sum and in sci_sub
   // if you do not this variable, PutLhsVar is added
@@ -92,28 +90,13 @@ function builder_gw_c()
   "cwt_int.c","dwt3d_int.c","cowt_int.c"];    // objects files
 
 	ldflags = ""
-	scilab6_flag =""
-	v = getversion("scilab");
-	if (v(1)>5) then
-		scilab6_flag ="-D_SCILAB6_ "
-	end;
-    if ( getos() == "Windows" ) then
-        include1 = "..\..\src\c";
-        include2 = "..\..\src\gwsupport";
-        include3 = SCI+"\modules\output_stream\includes";
-
-        cflags = scilab6_flag + "-DWIN32 "+..
-        " -I"""+include1+""""+..
-        " -I"""+include2+""""+..
-        " -I"""+include3+"""";
-    else
-        include1 = gateway_path;
-        include2 = gateway_path+"../../src/c";
-        include3 = gateway_path+"../../src/gwsupport";
-        cflags = scilab6_flag + "-I"""+include1+""""+..
-        " -I"""+include2+""""+..
-        " -I"""+include3+"""";
+    includes = [gateway_path
+                fullfile(module_path,"src","c")
+                fullfile(module_path,"src","gwsupport")];
+    if getos() == "Windows"
+        includes = [includes;fullfile(SCI,"modules","output_stream",includes)];
     end
+    cflags = strcat("-I "+includes+" ")
     // Caution : the order matters !
     libs = [
     "../../src/c/libswtlib"
@@ -122,12 +105,7 @@ function builder_gw_c()
 
     tbx_build_gateway("swt_c", FUNCTIONS_GATEWAY, FILES_GATEWAY, gateway_path, libs, ldflags, cflags);
 
-
-
-  //tbx_build_gateway("swt_c", FUNCTIONS_GATEWAY, FILES_GATEWAY, CURRENT_PATH, "","",CFLAGS);
-
 endfunction
 
 builder_gw_c();
 clear builder_gw_c; // remove builder_gw_c on stack
-//

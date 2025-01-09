@@ -26,11 +26,7 @@
 
 int
 int_dwt3 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
   static int l5, m5, n5, l6, m6, n6, l7, m7, n7, l8, m8, n8;
@@ -898,11 +894,7 @@ int_dwt3
 
 int
 int_idwt3 
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
 {
   static int l1, m1, n1, l2, m2, n2, l3, m3, n3, l4, m4, n4;
   static int l5, m5, n5, l6, m6, n6, l7, m7, n7, l8, m8, n8;

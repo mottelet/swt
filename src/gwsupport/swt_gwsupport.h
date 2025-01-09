@@ -203,6 +203,8 @@ void  wextend_content_validate (void * pvApiCtx,int flow, int *errCode, char *in
    void idwt3_form_validate (void * pvApiCtx, int *errCode, int *flow, int NInputArgument);
    void idwt3_content_validate (void * pvApiCtx, int *errCode, int flow, char* l2,	char* char_l3,int* l3, char* char_l4,int* l4, int* l5,
    int* l8);
+   void idwt3(double *mat3DIn, int row, int col, int sli, double *mat3DOut, int r, int c, int s, 
+       double *Lo1, double *Hi1, double *Lo2, double *Hi2, double *Lo3, double *Hi3, int fLen1, int fLen2, int fLen3);
    void dualtree_form_validate (void * pvApiCtx, int *errCode, int *flow,  int NInputArgument);
    void dualtree_content_validate (void * pvApiCtx, int *errCode, int flow, int l1, int l2,
   			   int l3, int l4, int l5, int l6);
@@ -212,7 +214,7 @@ void dualtree2D_form_validate (void * pvApiCtx, int *errCode, int *flow,  int NI
 void icplxdual2D_form_validate (void * pvApiCtx, int *errCode, int *flow,  int NInputArgument);
 
 int swt_gwsupport_GetRealMatrixOfDoubles(void *pvApiCtx, char * fname, int ivar, int * _piRows , int * _piCols, double** _pdblReal );
-int swt_gwsupport_GetCompexMatrixOfDoubles( void *pvApiCtx, char * fname, int ivar, int * _piRows , int * _piCols, double** _pdblReal , double** _pdblImg);
+int swt_gwsupport_GetComplexMatrixOfDoubles( void *pvApiCtx, char * fname, int ivar, int * _piRows , int * _piCols, double** _pdblReal , double** _pdblImg);
 int swt_gwsupport_GetRealMatrixOfDoublesAsInteger(void *pvApiCtx,  char * fname, int ivar, int * _piRows , int * _piCols, int** _pdblReal );
 int swt_gwsupport_GetScalarString(void *pvApiCtx,  char * fname, int ivar , char** mystring );
 int swt_gwsupport_GetRealHypermatofdouble( void *pvApiCtx, char * fname, int ivar, int ** _dims , int *_ndims, double** _pdblReal );
@@ -228,7 +230,6 @@ int swt_gwsupport_AllocMatrixOfInteger32 (void *pvApiCtx,  char * fname, int ova
 int swt_gwsupport_GetType( void* pvApiCtx, int ivar);
 int swt_gwsupport_GetMatrixdims( void* pvApiCtx, int ivar, int * _piRows , int * _piCols);
 int swt_gwsupport_IsVarComplex( void* pvApiCtx, int ivar);
-
 
 //from swtlib.h
     void sinus_form_validate(void* pvApiCtx, int *errCode);

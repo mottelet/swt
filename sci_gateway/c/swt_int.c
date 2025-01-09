@@ -26,11 +26,7 @@
 
  int
  int_swt
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
  {
    static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
    static int l4, m4, n4, l5, m5, n5, l6, m6, n6;
@@ -343,11 +339,7 @@
 
  int
  int_iswt
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
  {
    static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
    static int l4, m4, n4, l5, m5, n5;
@@ -608,11 +600,7 @@
 
  int
  int_swt2
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
  {
    static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
    static int l4, m4, n4, l5, m5, n5, l6, m6, n6;
@@ -1224,11 +1212,7 @@
 
  int
  int_iswt2
-#ifdef _SCILAB6_
 (char *fname, void* pvApiCtx)
-#else
-(char *fname)
-#endif
  {
    static int l1, m1, n1, l2, m2, n2, l3, m3, n3;
    static int l4, m4, n4, l5, m5, n5, l6, m6, n6;
