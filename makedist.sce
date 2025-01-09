@@ -23,7 +23,7 @@ else
     filename = modulename+"_"+mgetl("VERSION")+".bin."+getos()+"."+v(2)+"."+strsplit(getversion(),"-")(2)+".zip"
 end
 
-moduledir = fileparts(pwd(),"fname") 
+moduledir = pwd();
 cd("..")
 compress(filename,moduledir)
 cd(path_makedist);
