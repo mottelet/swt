@@ -52,12 +52,11 @@ wnorm is an utility to normalize a matrix for displaying
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
-x=rand(100,100);
-m=wnorm(x);
-imshow(m); // funtion provided by SIP or SIVP toolbox
-
-
-
+x = rand(100,100);
+m = wnorm(x);
+gcf().color_map = parula(512);
+grayplot(1:100,1:100,m);
+colorbar(0,1);
    ]]></programlisting>
 </refsection>
 

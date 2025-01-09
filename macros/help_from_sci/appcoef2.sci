@@ -26,7 +26,7 @@ function A=appcoef2(c,s,wname,[N])
 // A2=appcoef2(C,S,'db2',2);
 // A3=appcoef2(C,S,'db2',3);
 // scf();clf();
-// f=gcf();f.color_map=graycolormap(256);
+// f=gcf();f.color_map=gray(256);
 // subplot(221)
 // Matplot(X);
 // a=gca();a.tight_limits="on";

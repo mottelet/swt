@@ -65,4 +65,4 @@ subplot(5,1,5);
 grayplot(1:size(s,2),1:size(s,1),s');
 title('Semblance'); ylabel('Wavelength');a=gca();a.tight_limits="on";
 //colormap(jet(256));
-f.color_map =jetcolormap(256);
+f.color_map =jet(256);

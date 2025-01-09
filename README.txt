@@ -3,8 +3,8 @@
 
 Wavelet Toolbox containing FWT, CWT and SWT utility functions.
 
-SWT (version 0.3.2 For Scilab 6.1.x)
-====================================
+SWT (version 0.3.3 For Scilab 2025.0.0)
+=======================================
 
 This toolbox is aimed to mimic matlab wavelet toolbox. Most of the functions are similiar to their counterparts in Matlab equivalents.
 

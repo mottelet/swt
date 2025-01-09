@@ -11,11 +11,10 @@ function M=wcodemat(X,[MAX],[mode],[abso])
 // Description
 // wcodemat is an utility of coding for displaying matrix. With coding scheme to specific colormap, the content matrix could be in pseudo-color.
 // Examples
-// x=rand(100,100);
-// m=wcodemat(x,64);
-// cmap=jetcolormap(64);
-// y=ind2rgb(m,cmap); // function provided by SIP toolbox
-// imshow(y); // funtion provided by SIP or SIVP toolbox
+// x = rand(100,100);
+// m = wcodemat(x,64);
+// gcf().color_map = parula(64);
+// Matplot(double(m));
 //  
 //  
 // 

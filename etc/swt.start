@@ -1,55 +1,58 @@
-// Copyright (C) 2008 - INRIA
-// Copyright (C) 2009 - DIGITEO
+// ====================================================================
+// Allan CORNET - DIGITEO - 2010
+// Stéphane MOTTELET - UTC - 2024
+// ====================================================================
 
-// This file is released under the 3-clause BSD license. See COPYING-BSD.
 
-function swtlib = startModule()
+etc_tlbx  = get_absolute_file_path();
+etc_tlbx  = getshortpathname(etc_tlbx);
+root_tlbx = strncpy( etc_tlbx, length(etc_tlbx)-length("\etc\") );
 
-mprintf("Start swt toolbox - (0.3.2)\n");
-
-if isdef("swtlib") then
-	warning("Toolbox swt library is already loaded");
+if isdef("swt") then
+	warning("Scilab wavelet toolbox library is already loaded.");
+	clear root_tlbx;
+	clear etc_tlbx;
 	return;
 end
 
-etc_tlbx  = get_absolute_file_path("swt.start");
-etc_tlbx  = getshortpathname(etc_tlbx);
-root_tlbx = strncpy( etc_tlbx, length(etc_tlbx)-length("\etc") );
+mprintf("Start Scilab wavelet toolbox %s: ",mgetl(fullfile(root_tlbx,"VERSION")));
 
-//Load  functions library
+//Load functions library
 // =============================================================================
-mprintf("\tLoad macros\n");
+mprintf("load macros");
 pathmacros = pathconvert( root_tlbx ) + "macros" + filesep();
 swtlib = lib(pathmacros);
 clear pathmacros;
-
-// load gateways
 // =============================================================================
-mprintf("\tLoad gateways\n");
-verboseMode = ilib_verbose();
+mprintf(", gateways");
+verbose_mode = ilib_verbose();
 ilib_verbose(0);
-exec(pathconvert(root_tlbx+"/sci_gateway/loader_gateway.sce",%f));
-ilib_verbose(verboseMode);
+exec( pathconvert(root_tlbx+"/sci_gateway/loader_gateway.sce",%f));
+ilib_verbose(verbose_mode);
+clear verbose_mode;
 
 // Load and add help chapter
 // =============================================================================
 if or(getscilabmode() == ["NW";"STD"]) then
-        mprintf("\tLoad help\n");
-        path_addchapter = pathconvert(root_tlbx+"/jar");
-        if ( isdir(path_addchapter) <> [] ) then
-                add_help_chapter("swt", path_addchapter, %F);
-        end
+	mprintf(", help");
+	path_addchapter = pathconvert(root_tlbx+"/jar");
+	if ( isdir(path_addchapter) <> [] ) then
+		add_help_chapter("Wavelet Toolbox", path_addchapter, %F);
+		clear add_help_chapter;
+		clear path_addchapter;
+	end
 end
-
 // Load demos
 // =============================================================================
 if or(getscilabmode() == ["NW";"STD"]) then
-	mprintf("\tLoad demos\n");
+	mprintf(", demos");
 	pathdemos = pathconvert(root_tlbx+"/demos/swt.dem.gateway.sce",%F,%T);
-	add_demo("wavelet toolbox",pathdemos);
+	add_demo("Wavelet Toolbox",pathdemos);
+	clear pathdemos add_demo;
 end
+mprintf(".\n");
+// =============================================================================
+clear root_tlbx;
+clear etc_tlbx;
+// =============================================================================
 
-endfunction
-
-swtlib = startModule();
-clear startModule; // remove startModule on stack

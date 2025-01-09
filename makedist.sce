@@ -1,35 +1,30 @@
-//  Copyright (C) 2020 Stéphane Mottelet.
+// =============================================================================
+// Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
 //
-//  SCIIPOPT is free software; you can redistribute it and/or modify it
-//  under the terms of the GNU General Public License as published by the
-//  Free Software Foundation; either version 2, or (at your option) any
-//  later version.
+// Copyright (C) 2024 - UTC - Stéphane MOTTELET
 //
-//  This part of code is distributed with the FURTHER condition that it 
-//  can be compiled and linked with the Scilab libraries and it can be 
-//  used within the Scilab environment.
-//
-//  SCIIPOPT is distributed in the hope that it will be useful, but WITHOUT
-//  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-//  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
-//  for more details.
+// This file is hereby licensed under the terms of the GNU GPL v3.0,
+// For more information, see the COPYING file which you should have received
 
-path_makedist = get_absolute_file_path("makedist.sce");
+path_makedist = get_absolute_file_path();
 cd(path_makedist);
 
-deletefile(".gitignore");
-[sci,v]=getversion()
-http_get("https://atoms.scilab.org/toolboxes/swt/"+mgetl("VERSION")+"/DESCRIPTION","DESCRIPTION")
-if getos() <> "Windows" then
-    filename = "swt_"+mgetl("VERSION")+".bin."+v(2)+"."+getos()+".tar.gz"
-    cd ..
-    movefile("swt/makedist.sce","makedist.sce")
-    unix_g("tar cvzf "+filename+" swt")
-else
-    filename = "swt_"+mgetl("VERSION")+".bin."+v(2)+"."+getos()+".zip"
-    cd ..
-    movefile("swt/makedist.sce","makedist.sce")
-    host(SCI+"/tools/zip/zip.exe -r "+filename+" sci-ipopt")
+modulename = "swt"
+version = mgetl("VERSION")
+[result,status] = http_get(msprintf("%s/%s/%s/DESCRIPTION","https://atoms.scilab.org/toolboxes",modulename,version));
+if status == 200
+    mputl(result,"DESCRIPTION")
 end
-movefile("makedist.sce","swt/makedist.sce")
+
+[sci,v]=getversion()
+if getos() <> "Windows" then
+    filename = modulename+"_"+mgetl("VERSION")+".bin."+getos()+"."+v(2)+"."+strsplit(getversion(),"-")(2)+".tar.gz"
+else
+    filename = modulename+"_"+mgetl("VERSION")+".bin."+getos()+"."+v(2)+"."+strsplit(getversion(),"-")(2)+".zip"
+end
+
+moduledir = fileparts(pwd(),"fname") 
+cd("..")
+compress(filename,moduledir)
 cd(path_makedist);
+

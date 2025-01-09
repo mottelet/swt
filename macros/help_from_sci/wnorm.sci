@@ -10,9 +10,11 @@ function M=wnorm(X,[MIN],[MAX])
 // Description
 // wnorm is an utility to normalize a matrix for displaying
 // Examples
-// x=rand(100,100);
-// m=wnorm(x);
-// imshow(m); // funtion provided by SIP or SIVP toolbox
+// x = rand(100,100);
+// m = wnorm(x);
+// gcf().color_map = parula(512);
+// grayplot(1:100,1:100,m);
+// colorbar(0,1);
 //  
 //  
 // 

@@ -180,7 +180,6 @@ funmat = [
    "cplxdual2D"
    "dwt3"
    "idualtree2D"
-//   "ind2rgb"
    "upcoef2"
    "wavedec"
    "waverec"
